@@ -1,0 +1,60 @@
+/*
+Copyright 2026 New Vector Ltd.
+
+SPDX-License-Identifier: AGPL-3.0-only OR GPL-3.0-only OR LicenseRef-Element-Commercial
+Please see LICENSE files in the repository root for full details.
+*/
+
+.mx_ContactCard {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+        background-color: $system;
+    }
+
+    .mx_ContactCard_avatar {
+        flex-shrink: 0;
+    }
+
+    .mx_ContactCard_info {
+        flex: 1;
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+
+        .mx_ContactCard_name {
+            font-size: 15px;
+            font-weight: 500;
+            color: $primary-content;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .mx_ContactCard_status {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 13px;
+            color: $secondary-content;
+
+            .mx_ContactCard_status_indicator {
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background-color: $quaternary-content;
+            }
+
+            &.mx_ContactCard_status_online .mx_ContactCard_status_indicator {
+                background-color: $accent;
+            }
+        }
+    }
+}
