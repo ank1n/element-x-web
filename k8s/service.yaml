@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: element-x-web
+  namespace: element-x-web
+  labels:
+    app: element-x-web
+spec:
+  type: ClusterIP
+  selector:
+    app: element-x-web
+  ports:
+  - name: http
+    protocol: TCP
+    port: 80
+    targetPort: http
+  sessionAffinity: None

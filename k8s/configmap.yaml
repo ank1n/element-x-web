@@ -1,0 +1,47 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: element-x-web-config
+  namespace: element-x-web
+data:
+  config.json: |
+    {
+      "default_server_config": {
+        "m.homeserver": {
+          "base_url": "https://matrix.implica.ru",
+          "server_name": "implica.ru"
+        }
+      },
+      "brand": "Element X",
+      "recording_api_base_url": "https://api.market.implica.ru/api/recording",
+      "enable_call_recording": true,
+      "enable_contacts_tab": true,
+      "enable_calls_tab": true,
+      "enable_apps_tab": true,
+      "apps": [
+        {
+          "id": "security",
+          "name": "Security Portal",
+          "url": "https://ozzy.implica.ru/security/",
+          "icon": "🔒",
+          "description": "Monitor security incidents and flows",
+          "isPinned": true
+        },
+        {
+          "id": "labeling",
+          "name": "Flow Labeling",
+          "url": "https://ozzy.implica.ru/labeling/",
+          "icon": "🏷️",
+          "description": "Label network flows for ML training",
+          "isPinned": false
+        },
+        {
+          "id": "mlops",
+          "name": "MLOps Dashboard",
+          "url": "https://ozzy.implica.ru/mlops/",
+          "icon": "📊",
+          "description": "ML model monitoring and metrics",
+          "isPinned": false
+        }
+      ]
+    }
