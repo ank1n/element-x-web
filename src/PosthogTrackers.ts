@@ -31,7 +31,7 @@ const notLoggedInMap: Record<Exclude<Views, Views.LOGGED_IN>, ScreenName> = {
     [Views.LOCK_STOLEN]: "SessionLockStolen",
 };
 
-const loggedInPageTypeMap: Record<PageType, ScreenName> = {
+const loggedInPageTypeMap: Record<PageType, ScreenName | string> = {
     [PageType.HomePage]: "Home",
     [PageType.RoomView]: "Room",
     [PageType.UserView]: "User",
