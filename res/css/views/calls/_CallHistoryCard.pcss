@@ -1,0 +1,98 @@
+/*
+Copyright 2026 New Vector Ltd.
+
+SPDX-License-Identifier: AGPL-3.0-only OR GPL-3.0-only OR LicenseRef-Element-Commercial
+Please see LICENSE files in the repository root for full details.
+*/
+
+.mx_CallHistoryCard {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+        background-color: $system;
+    }
+
+    &.mx_CallHistoryCard_missed {
+        .mx_CallHistoryCard_type_label {
+            color: $alert;
+        }
+    }
+
+    .mx_CallHistoryCard_avatar {
+        flex-shrink: 0;
+    }
+
+    .mx_CallHistoryCard_info {
+        flex: 1;
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+
+        .mx_CallHistoryCard_name {
+            font-size: 15px;
+            font-weight: 500;
+            color: $primary-content;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .mx_CallHistoryCard_details {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 13px;
+            color: $secondary-content;
+
+            .mx_CallHistoryCard_type_icon {
+                font-size: 14px;
+            }
+
+            .mx_CallHistoryCard_separator {
+                opacity: 0.5;
+            }
+
+            .mx_CallHistoryCard_recording_indicator {
+                color: $accent;
+                font-weight: 600;
+            }
+        }
+    }
+
+    .mx_CallHistoryCard_meta {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 8px;
+
+        .mx_CallHistoryCard_timestamp {
+            font-size: 12px;
+            color: $tertiary-content;
+            white-space: nowrap;
+        }
+
+        .mx_CallHistoryCard_playButton {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background-color: $quaternary-content;
+            color: $primary-content;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            transition: all 0.2s ease;
+
+            &:hover {
+                background-color: $accent;
+                color: $button-primary-fg-color;
+            }
+        }
+    }
+}

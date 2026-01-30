@@ -440,7 +440,16 @@
     "calls": {
         "empty_description": "Call history will appear here",
         "empty_title": "No calls",
-        "title": "Calls"
+        "filter_all": "calls|filter_all",
+        "filter_incoming": "calls|filter_incoming",
+        "filter_missed": "calls|filter_missed",
+        "filter_outgoing": "calls|filter_outgoing",
+        "search": "calls|search",
+        "title": "Calls",
+        "type_incoming": "calls|type_incoming",
+        "type_missed": "calls|type_missed",
+        "type_outgoing": "calls|type_outgoing",
+        "type_video": "calls|type_video"
     },
     "cannot_invite_without_identity_server": "Cannot invite user by email without an identity server. You can connect to one under \"Settings\".",
     "cannot_reach_homeserver": "Cannot reach homeserver",
@@ -665,6 +674,12 @@
     "contacts": {
         "empty_description": "Start a chat with someone to add them as a contact",
         "empty_title": "No contacts",
+        "filter_all": "contacts|filter_all",
+        "filter_favorites": "contacts|filter_favorites",
+        "filter_online": "contacts|filter_online",
+        "search": "contacts|search",
+        "status_offline": "contacts|status_offline",
+        "status_online": "contacts|status_online",
         "title": "Contacts"
     },
     "create_room": {
