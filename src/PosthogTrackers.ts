@@ -35,6 +35,9 @@ const loggedInPageTypeMap: Record<PageType, ScreenName> = {
     [PageType.HomePage]: "Home",
     [PageType.RoomView]: "Room",
     [PageType.UserView]: "User",
+    [PageType.ContactsView]: "Contacts",
+    [PageType.CallsView]: "Calls",
+    [PageType.AppsView]: "Apps",
 };
 
 export default class PosthogTrackers {

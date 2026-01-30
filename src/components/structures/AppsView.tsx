@@ -19,13 +19,13 @@ export default class AppsView extends React.Component {
         return (
             <div className="mx_AppsView">
                 <div className="mx_AppsView_header">
-                    <h1>{_t("apps.title")}</h1>
+                    <h1>{_t("apps|title")}</h1>
                 </div>
                 <div className="mx_AppsView_content">
                     <EmptyState
                         icon="📱"
-                        title={_t("apps.empty_title")}
-                        description={_t("apps.empty_description")}
+                        title={_t("apps|empty_title")}
+                        description={_t("apps|empty_description")}
                     />
                 </div>
             </div>

@@ -51,10 +51,10 @@ export default class TabBar extends React.Component<TabBarProps> {
                             "mx_TabBar_tab_active": currentPage === PageTypes.ContactsView,
                         })}
                         onClick={this.onContactsClick}
-                        title={_t("tabs.contacts")}
+                        title={_t("tabs|contacts")}
                     >
                         <div className="mx_TabBar_icon">👥</div>
-                        <div className="mx_TabBar_label">{_t("tabs.contacts")}</div>
+                        <div className="mx_TabBar_label">{_t("tabs|contacts")}</div>
                     </AccessibleButton>
                 )}
 
@@ -64,10 +64,10 @@ export default class TabBar extends React.Component<TabBarProps> {
                             "mx_TabBar_tab_active": currentPage === PageTypes.CallsView,
                         })}
                         onClick={this.onCallsClick}
-                        title={_t("tabs.calls")}
+                        title={_t("tabs|calls")}
                     >
                         <div className="mx_TabBar_icon">📞</div>
-                        <div className="mx_TabBar_label">{_t("tabs.calls")}</div>
+                        <div className="mx_TabBar_label">{_t("tabs|calls")}</div>
                     </AccessibleButton>
                 )}
 
@@ -76,10 +76,10 @@ export default class TabBar extends React.Component<TabBarProps> {
                         "mx_TabBar_tab_active": currentPage === PageTypes.RoomView || currentPage === PageTypes.HomePage,
                     })}
                     onClick={this.onChatsClick}
-                    title={_t("tabs.chats")}
+                    title={_t("tabs|chats")}
                 >
                     <div className="mx_TabBar_icon">💬</div>
-                    <div className="mx_TabBar_label">{_t("tabs.chats")}</div>
+                    <div className="mx_TabBar_label">{_t("tabs|chats")}</div>
                 </AccessibleButton>
 
                 {this.config.enableAppsTab && (
@@ -88,10 +88,10 @@ export default class TabBar extends React.Component<TabBarProps> {
                             "mx_TabBar_tab_active": currentPage === PageTypes.AppsView,
                         })}
                         onClick={this.onAppsClick}
-                        title={_t("tabs.apps")}
+                        title={_t("tabs|apps")}
                     >
                         <div className="mx_TabBar_icon">📱</div>
-                        <div className="mx_TabBar_label">{_t("tabs.apps")}</div>
+                        <div className="mx_TabBar_label">{_t("tabs|apps")}</div>
                     </AccessibleButton>
                 )}
             </div>

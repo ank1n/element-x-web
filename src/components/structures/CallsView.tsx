@@ -19,13 +19,13 @@ export default class CallsView extends React.Component {
         return (
             <div className="mx_CallsView">
                 <div className="mx_CallsView_header">
-                    <h1>{_t("calls.title")}</h1>
+                    <h1>{_t("calls|title")}</h1>
                 </div>
                 <div className="mx_CallsView_content">
                     <EmptyState
                         icon="📞"
-                        title={_t("calls.empty_title")}
-                        description={_t("calls.empty_description")}
+                        title={_t("calls|empty_title")}
+                        description={_t("calls|empty_description")}
                     />
                 </div>
             </div>
