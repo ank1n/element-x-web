@@ -1,0 +1,93 @@
+/*
+Copyright 2026 New Vector Ltd.
+
+SPDX-License-Identifier: AGPL-3.0-only OR GPL-3.0-only OR LicenseRef-Element-Commercial
+Please see LICENSE files in the repository root for full details.
+*/
+
+.mx_RecordingControls {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 12px 16px;
+    border-radius: 8px;
+    background-color: $background;
+    border: 1px solid $quinary-content;
+
+    &.mx_RecordingControls_active {
+        background-color: rgba($alert, 0.1);
+        border-color: $alert;
+    }
+
+    .mx_RecordingControls_status {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        flex: 1;
+
+        .mx_RecordingControls_indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: $alert;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .mx_RecordingControls_text {
+            font-size: 14px;
+            font-weight: 600;
+            color: $alert;
+        }
+
+        .mx_RecordingControls_duration {
+            font-size: 14px;
+            color: $secondary-content;
+            font-family: monospace;
+        }
+    }
+
+    .mx_RecordingControls_buttons {
+        display: flex;
+        gap: 8px;
+
+        .mx_RecordingControls_startButton,
+        .mx_RecordingControls_stopButton {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            transition: all 0.2s ease;
+        }
+
+        .mx_RecordingControls_startButton {
+            background-color: $alert;
+            color: white;
+
+            &:hover {
+                background-color: darken($alert, 10%);
+            }
+        }
+
+        .mx_RecordingControls_stopButton {
+            background-color: $quaternary-content;
+            color: $primary-content;
+
+            &:hover {
+                background-color: $system;
+            }
+        }
+    }
+}
+
+@keyframes pulse {
+    0%,
+    100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
