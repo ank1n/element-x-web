@@ -4178,5 +4178,58 @@
             "userInputs": "There should not be any personal or page related data.",
             "wordByItself": "A word by itself is easy to guess"
         }
+    },
+    "tabs": {
+        "contacts": "Contacts",
+        "calls": "Calls",
+        "chats": "Chats",
+        "apps": "Apps"
+    },
+    "contacts": {
+        "title": "Contacts",
+        "search": "Search contacts",
+        "filter_all": "All",
+        "filter_online": "Online",
+        "filter_favorites": "Favorites",
+        "empty_title": "No contacts",
+        "empty_description": "Start a chat with someone to add them as a contact",
+        "status_online": "Online",
+        "status_offline": "Offline"
+    },
+    "calls": {
+        "title": "Calls",
+        "search": "Search",
+        "filter_all": "All",
+        "filter_missed": "Missed",
+        "filter_incoming": "Incoming",
+        "filter_outgoing": "Outgoing",
+        "type_incoming": "Incoming",
+        "type_outgoing": "Outgoing",
+        "type_video": "Video call",
+        "type_missed": "Missed",
+        "empty_title": "No calls",
+        "empty_description": "Call history will appear here"
+    },
+    "apps": {
+        "title": "Apps",
+        "search": "Search apps",
+        "category_all": "All",
+        "category_productivity": "Productivity",
+        "category_communication": "Communication",
+        "category_tools": "Tools",
+        "category_analytics": "Analytics",
+        "empty_title": "No apps",
+        "empty_description": "Apps will appear here",
+        "loading": "Loading..."
+    },
+    "recording": {
+        "button_start": "Start recording",
+        "button_stop": "Stop recording",
+        "consent_title": "Start recording?",
+        "consent_message": "This call will be recorded. All participants will be notified.",
+        "consent_confirm": "Start recording",
+        "consent_cancel": "Cancel",
+        "indicator": "REC",
+        "error": "Recording error"
     }
 }

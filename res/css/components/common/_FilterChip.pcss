@@ -1,0 +1,29 @@
+/*
+Copyright 2026 New Vector Ltd.
+
+SPDX-License-Identifier: AGPL-3.0-only OR GPL-3.0-only OR LicenseRef-Element-Commercial
+Please see LICENSE files in the repository root for full details.
+*/
+
+.mx_FilterChip {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 16px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background-color: $background;
+    color: $secondary-content;
+    border: 1px solid $quinary-content;
+
+    &:hover {
+        background-color: $system;
+    }
+
+    &.mx_FilterChip_selected {
+        background-color: $accent;
+        color: $button-primary-fg-color;
+        border-color: $accent;
+    }
+}

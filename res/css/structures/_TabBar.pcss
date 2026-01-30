@@ -1,0 +1,52 @@
+/*
+Copyright 2026 New Vector Ltd.
+
+SPDX-License-Identifier: AGPL-3.0-only OR GPL-3.0-only OR LicenseRef-Element-Commercial
+Please see LICENSE files in the repository root for full details.
+*/
+
+.mx_TabBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 60px;
+    background-color: $background;
+    border-top: 1px solid $quinary-content;
+    padding: 0 8px;
+
+    .mx_TabBar_tab {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex: 1;
+        padding: 8px;
+        cursor: pointer;
+        border-radius: 8px;
+        transition: all 0.2s ease;
+        color: $secondary-content;
+
+        &:hover {
+            background-color: $system;
+        }
+
+        &.mx_TabBar_tab_active {
+            color: $accent;
+
+            .mx_TabBar_icon {
+                transform: scale(1.1);
+            }
+        }
+
+        .mx_TabBar_icon {
+            font-size: 24px;
+            margin-bottom: 4px;
+            transition: transform 0.2s ease;
+        }
+
+        .mx_TabBar_label {
+            font-size: 12px;
+            font-weight: 500;
+        }
+    }
+}

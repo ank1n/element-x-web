@@ -52,6 +52,10 @@ import { UPDATE_EVENT } from "../../stores/AsyncStore";
 import { RoomView } from "./RoomView";
 import ToastContainer from "./ToastContainer";
 import UserView from "./UserView";
+import TabBar from "./TabBar";
+import ContactsView from "./ContactsView";
+import CallsView from "./CallsView";
+import AppsView from "./AppsView";
 import { BackdropPanel } from "./BackdropPanel";
 import { mediaFromMxc } from "../../customisations/Media";
 import { UserTab } from "../views/dialogs/UserTab";
@@ -656,6 +660,24 @@ class LoggedInView extends React.Component<IProps, IState> {
         this._roomView.current?.handleScrollKey(ev);
     };
 
+    private handleTabChange = (pageType: PageTypes): void => {
+        // Dispatch view action based on page type
+        switch (pageType) {
+            case PageTypes.ContactsView:
+                dis.dispatch({ action: "view_contacts" });
+                break;
+            case PageTypes.CallsView:
+                dis.dispatch({ action: "view_calls" });
+                break;
+            case PageTypes.AppsView:
+                dis.dispatch({ action: "view_apps" });
+                break;
+            case PageTypes.RoomView:
+                dis.dispatch({ action: Action.ViewHomePage });
+                break;
+        }
+    };
+
     public render(): React.ReactNode {
         let pageElement;
 
@@ -685,6 +707,18 @@ class LoggedInView extends React.Component<IProps, IState> {
                         <UserView userId={this.props.currentUserId} resizeNotifier={this.props.resizeNotifier} />
                     );
                 }
+                break;
+
+            case PageTypes.ContactsView:
+                pageElement = <ContactsView />;
+                break;
+
+            case PageTypes.CallsView:
+                pageElement = <CallsView />;
+                break;
+
+            case PageTypes.AppsView:
+                pageElement = <AppsView />;
                 break;
         }
 
@@ -733,6 +767,7 @@ class LoggedInView extends React.Component<IProps, IState> {
                         <ResizeHandle passRef={this.resizeHandler} id="lp-resizer" />
                         <div className="mx_RoomView_wrapper">{pageElement}</div>
                     </div>
+                    <TabBar currentPage={this.props.page_type as PageTypes} onTabChange={this.handleTabChange} />
                 </div>
                 <PipContainer />
                 <NonUrgentToastContainer />
